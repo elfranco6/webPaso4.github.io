@@ -5,22 +5,11 @@
 // import 'owl.carousel/dist/assets/owl.carousel.min.css';
 // import 'owl.carousel';
 
-// ('.owl-carousel').owlCarousel({
-//     loop: true,
-//     margin: 10,
-//     nav: true,
-//     responsive: {
-//         0: {
-//             items: 1
-//         },
-//         600: {
-//             items: 3
-//         },
-//         1000: {
-//             items: 5
-//         }
-//     }
-// })
+
+
+
+
+
 
 
 
@@ -77,7 +66,47 @@ jQuery(window).on("load", function(e) {
 
 // Shorthand for $( document ).ready()
 $(function() {
+
+
+
+
+
+
+    let tabsSlider = jQuery(".tabs-topics .tabs-topics-list");
+
+    if (jQuery(window).width() <= 576) {
+        function sliderTabs() {
+            tabsSlider.addClass('owl-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                nav: false,
+                dots: true,
+                autoplay: false,
+                navPosition: 'bottom', //posicion bullets
+                controls: false, //botones prev/next
+                preventScrollOnTouch: 'force',
+                responsive: {
+                    0: {
+                        gutter: 0, //separacion entre slides
+                        items: 1,
+                        edgePadding: 0, //espaciado hacia los lados
+                        autoplay: false,
+                        autoplayHoverPause: true,
+                        autoplayTimeout: 3500,
+                        autoplayButtonOutput: false,
+                        center: true, //centrar el slide activo
+                    },
+
+                }
+            });
+
+        }
+    } else {
+        jQuery(this).removeClass("owl-carousel")
+    }
+
     initialTabsByFeatures();
     colorCustomTabsContent();
+    sliderTabs();
 
 })

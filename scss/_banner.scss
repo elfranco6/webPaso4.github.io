@@ -17,19 +17,32 @@ html body * {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.404);
         .text-banner {
+            @include container;
             display: flex;
             flex-direction: column;
             position: absolute;
             top: 50%;
             left: 20%;
             transform: translate(-50%, -50%);
+            width: 30%;
+            @media(max-width: 576px) {
+                width: 60%;
+            }
             h1 {
                 color: white;
                 margin: 0;
+                font-size: 60px;
             }
             h2 {
                 color: white;
                 margin: 0;
+                font-size: 30px;
+            }
+            p {
+                color: white;
+                margin: 10px 0 0 0;
+                font-size: 16px;
+                line-height: 25px;
             }
         }
     }
