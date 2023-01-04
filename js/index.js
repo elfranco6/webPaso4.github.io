@@ -107,6 +107,6 @@ $(function() {
 
     initialTabsByFeatures();
     colorCustomTabsContent();
-    sliderTabs();
+    //sliderTabs();
 
 })
