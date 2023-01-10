@@ -9,6 +9,9 @@ html body * {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        @media(max-width: 768px) {
+            height: 61vh;
+        }
     }
     .var-dump {
         position: absolute;
@@ -22,27 +25,38 @@ html body * {
             flex-direction: column;
             position: absolute;
             top: 50%;
-            left: 20%;
+            left: 32%;
             transform: translate(-50%, -50%);
-            width: 30%;
-            @media(max-width: 576px) {
-                width: 60%;
+            width: 47%;
+            @media(max-width: 768px) {
+                width: 80%;
+                left: 50%;
+                top: 40%;
             }
             h1 {
                 color: white;
                 margin: 0;
                 font-size: 60px;
+                @media(max-width: 768px) {
+                    font-size: 40px;
+                }
             }
             h2 {
                 color: white;
                 margin: 0;
                 font-size: 30px;
+                @media(max-width: 768px) {
+                    font-size: 30px;
+                }
             }
             p {
                 color: white;
                 margin: 10px 0 0 0;
                 font-size: 16px;
                 line-height: 25px;
+                @media(max-width: 768px) {
+                    font-size: 14px;
+                }
             }
         }
     }

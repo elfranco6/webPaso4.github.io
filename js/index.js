@@ -23,6 +23,9 @@ function colorCustomTabsContent() {
     });
 }
 
+
+jQuery(".tabs-topics .tabs-topics-list .owl-dots .owl-dot.active")
+
 // ==================== INICIO TABS INTERNOS CONTENIDO PARA VIVIR / TRABAJAR ====================
 
 function initialTabsByFeatures() {
@@ -58,18 +61,9 @@ function initialTabsByFeatures() {
 
 }
 
-jQuery(window).on("load", function(e) {
-
-});
-
-
 
 // Shorthand for $( document ).ready()
 $(function() {
-
-
-
-
 
 
     let tabsSlider = jQuery(".tabs-topics .tabs-topics-list");
@@ -77,7 +71,7 @@ $(function() {
     if (jQuery(window).width() <= 576) {
         function sliderTabs() {
             tabsSlider.addClass('owl-carousel').owlCarousel({
-                items: 1,
+                items: 2,
                 loop: true,
                 nav: false,
                 dots: true,
@@ -88,7 +82,7 @@ $(function() {
                 responsive: {
                     0: {
                         gutter: 0, //separacion entre slides
-                        items: 1,
+                        items: 2,
                         edgePadding: 0, //espaciado hacia los lados
                         autoplay: false,
                         autoplayHoverPause: true,
@@ -96,7 +90,19 @@ $(function() {
                         autoplayButtonOutput: false,
                         center: true, //centrar el slide activo
                     },
+                    768: {
+                        gutter: 0, //separacion entre slides
+                        items: 3,
+                        edgePadding: 0, //espaciado hacia los lados
+                        autoplay: false
+                    },
 
+                    992: {
+                        gutter: 0, //separacion entre slides
+                        items: 3,
+                        edgePadding: 0, //espaciado hacia los lados
+                        autoplay: false
+                    },
                 }
             });
 
@@ -107,6 +113,12 @@ $(function() {
 
     initialTabsByFeatures();
     colorCustomTabsContent();
-    //sliderTabs();
+    sliderTabs();
 
-})
+});
+
+
+
+jQuery(window).on("load", function(e) {
+
+});
