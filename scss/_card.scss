@@ -1,54 +1,58 @@
-        .cards-types-container {
-            display: flex;
-            justify-content: center;
-            margin: 2% 0;
-            gap: 22px;
-        }
-        
-        .card {
-            width: 300px;
-            height: 86px;
-            padding: 0;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            box-sizing: border-box;
-            overflow: hidden;
-            & * {
-                transition: 0.3s ease all;
-            }
-            &img {
-                margin: 0;
-                width: 300px;
-                height: 224px;
-                object-fit: cover;
-                display: block;
-            }
-            h3 {
-                margin: 0;
-                padding: 12px 12px 48px;
-                line-height: 32px;
-                font-weight: 500;
-                font-size: 20px;
-            }
-            &.focus-content {
-                display: block;
-                padding: 8px 12px;
-            }
-            p {
-                margin: 0;
-                padding: 12px 12px 48px;
-                line-height: 25px;
-                font-size: 14px;
-            }
-            // &:hover img,
-            // .card:focus-within {
-            // }
-            &:hover {
-                height: 280px;
-                transition: 0.5s ease all;
-            }
-            &:hover h3,
-            .card:focus-within h3 {
-                padding: 8px 12px 0;
-            }
-        }
+.cards-types-container {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+    gap: 22px;
+}
+
+.card {
+    width: 300px;
+    height: 86px;
+    padding: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    & * {
+        transition: 0.3s ease all;
+    }
+    @media (max-width:768px) {
+        width: auto;
+        height: auto;
+    }
+    &img {
+        margin: 0;
+        width: 300px;
+        height: 224px;
+        object-fit: cover;
+        display: block;
+    }
+    h3 {
+        margin: 0;
+        padding: 12px 12px 48px;
+        line-height: 32px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    &.focus-content {
+        display: block;
+        padding: 8px 12px;
+    }
+    p {
+        margin: 0;
+        padding: 12px 12px 48px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    // &:hover img,
+    // .card:focus-within {
+    // }
+    &:hover {
+        height: 280px;
+        transition: 0.5s ease all;
+    }
+    &:hover h3,
+    .card:focus-within h3 {
+        padding: 8px 12px 0;
+    }
+}
